@@ -1,9 +1,20 @@
-<h1> <%= @pageHeader %> </h1>
+<div class="container">
+  <div class="row">
+    <h1> <%= @pageHeader %> </h1>
+  </div>
+</div>
+
 
 <div> <%= react_component('CameraMakesMenuBar', {data: @camera_makes}) %> </div>
 
 
+<div class="container">
 
+  <div class="row ">
+    <div class="imageStyling">
+      <%= react_component('IndexImageComponent', {data: @all_works}) %>
+    </div>
+  </div>
+</div>
 
-<%= react_component('IndexImageComponent', {data: @all_works}) %>
 
