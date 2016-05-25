@@ -7,7 +7,6 @@ var CameraMakesMenuBar = React.createClass({
         return <ul>{make}</ul>;
     }
 
-
 });
 
 var Make = React.createClass({

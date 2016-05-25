@@ -1,6 +1,8 @@
-<h1>Index page </h1>
+<h1> <%= @pageHeader %> </h1>
 
-<%= react_component('CameraMakesMenuBar', {data: @camera_makes}) %>
+<div> <%= react_component('CameraMakesMenuBar', {data: @camera_makes}) %> </div>
+
+
 
 
 <%= react_component('IndexImageComponent', {data: @all_works}) %>
