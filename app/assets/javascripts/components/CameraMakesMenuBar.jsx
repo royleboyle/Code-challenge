@@ -1,7 +1,7 @@
 var CameraMakesMenuBar = React.createClass({
     render: function() {
         var make = Object.keys(this.props.data).map(function (item, index) {
-            return <Make data={item} />;
+            return <Make key={index} data={item} />;
         }, this);
         return <ul>{make}</ul>;
     }

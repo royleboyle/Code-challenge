@@ -12,7 +12,6 @@ class WelcomeController < ApplicationController
     @pageHeader = @makeName
     @all_works = XmlModel.index
     @camera_make = XmlModel.get_specific_make(@makeName, @all_works)
-    @camera_models = XmlModel.get_camera_model(@all_works)
   end
 
 end
