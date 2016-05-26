@@ -2,30 +2,22 @@ var CameraMakesComponent= React.createClass({
     render: function () {
         return (
             <div>
-              <CameraMake data={this.props.data}/>
+                <CameraMake data={this.props.data}/>
             </div>
         )
     }
 });
 
-
 var CameraMake = React.createClass({
     render: function() {
-       var make = Object.keys(this.props.data).map(function (item, index) {
+        var make = Object.keys(this.props.data).map(function (item, index) {
 
             return <Image data={this.props.data[item]} />;
 
         }, this);
-
-
-
         return <div>{make}</div>;
-
     }
-
-
 });
-
 
 var CameraModel = React.createClass({
     render: function() {
@@ -34,14 +26,8 @@ var CameraModel = React.createClass({
             return <Image data={this.props.data[item]} />;
 
         }, this);
-
-
-
         return <div>{model}</div>;
-
     }
-
-
 });
 
 var Image = React.createClass({
@@ -55,7 +41,6 @@ var Image = React.createClass({
                 </div>
             )
         });
-
         return <div>{works}</div>
     }
 });
