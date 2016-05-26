@@ -1,18 +1,19 @@
-<div class="container">
+<div class="container" xmlns="http://www.w3.org/1999/html">
   <div class="row">
     <h1> <%= @pageHeader %> </h1>
   </div>
+
+  <div class="row">
+    <div>
+      <%= react_component('CameraMakesMenuBar', {data: @camera_makes}) %>
+    </div>
+  </div>
 </div>
 
-
-<div> <%= react_component('CameraMakesMenuBar', {data: @camera_makes}) %> </div>
-
-
 <div class="container">
-
   <div class="row ">
     <div class="imageStyling">
-      <%= react_component('IndexImageComponent', {data: @all_works}) %>
+      <!--<%= react_component('IndexImageComponent', {data: @all_works}) %>-->
     </div>
   </div>
 </div>

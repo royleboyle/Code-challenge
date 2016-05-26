@@ -36,5 +36,18 @@ class XmlModel < ActiveRecord::Base
     return hash_camera_models
   end
 
+  def self.get_specific_make(makeName, works)
+    hash_camera_make = Hash.new
+    works.each do |value|
+      if (value['exif']['make'] == makeName)
+        if (!hash_camera_make.has_key? makeName)
+          hash_camera_make[makeName] = [value]
+        else
+          hash_camera_make[makeName].push(value)
+        end
+      end
+    end
+    return hash_camera_make
+  end
 end
 

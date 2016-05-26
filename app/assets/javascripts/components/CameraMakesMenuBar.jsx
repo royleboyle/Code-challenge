@@ -9,8 +9,7 @@ var CameraMakesMenuBar = React.createClass({
 
 var Make = React.createClass({
     render: function(){
-        return <li><a href="http://www.google.com.au"> {this.props.data} </a></li>
+        return <li><a href={window.location.origin + "/make/" + this.props.data}>{this.props.data}</a></li>
     }
 });
-
 

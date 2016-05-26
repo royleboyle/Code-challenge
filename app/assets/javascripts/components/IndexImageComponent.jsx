@@ -35,7 +35,7 @@ var IndexImageComponent = React.createClass({
                 return <div>{image}</div>
             }
             i++;
-            return <IndexImage data={this.props.data[item].urls.url[2]}/>;
+            return <IndexImage data={this.props.data[item].urls}/>;
         }, this);
         return <div>{image}</div>
     }
@@ -43,7 +43,11 @@ var IndexImageComponent = React.createClass({
 
 var IndexImage = React.createClass({
     render: function () {
-        return <img className="col-xs-6 col-lg-4" src={this.props.data}/>
+        return <div>
+            <img className="col-xs-6 col-lg-3 smallPicture" src={this.props.data.url[0]}/>
+            <img className="col-xs-6 col-lg-4 mediumPicture" src={this.props.data.url[1]}/>
+            <img className="col-xs-12 col-lg-6 largePicture" src={this.props.data.url[2]}/>
+        </div>
     }
 });
 
